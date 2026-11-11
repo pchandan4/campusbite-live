@@ -1,0 +1,132 @@
+{
+  "planHash": "b34935c4158191ddf4e9a265dc8d9e3e19b9df1e558bcbced5951c1686075541",
+  "phase": "standalone",
+  "recordedAtUtc": "2026-11-11T10:29:36.5008576Z",
+  "retryCount": 1,
+  "resetBaseline": false,
+  "complete": true,
+  "result": {
+    "setupSucceeded": true,
+    "setupDurationMs": 76463,
+    "setupFailureOutput": null,
+    "assertions": [
+      {
+        "name": "typecheck",
+        "kind": "process",
+        "verificationMethod": "exit-code",
+        "passed": true,
+        "timedOut": false,
+        "skipped": false,
+        "skippedReason": null,
+        "exitCode": 0,
+        "outputSample": "\r\n\u003E campusbite-live@1.0.0 typecheck\r\n\u003E tsc --noEmit\r\n\r\n",
+        "durationMs": 5950
+      },
+      {
+        "name": "tests-pass",
+        "kind": "process",
+        "verificationMethod": "test-results",
+        "passed": true,
+        "timedOut": false,
+        "skipped": false,
+        "skippedReason": null,
+        "exitCode": 0,
+        "outputSample": "\r\n\u003E campusbite-live@1.0.0 test\r\n\u003E vitest run\r\n\r\n\r\n RUN  v5.1.0 C:/Users/ujjai/Downloads/campusbite-live\r\n\r\n\r\n Test Files  1 passed (1)\r\n      Tests  2 passed (2)\r\n   Start at  15:59:04\r\n   Duration  561ms (transform 46%, import 42%, tests 7%, worker 4%)\r\n\r\n",
+        "durationMs": 5511,
+        "testResults": {
+          "testFramework": "vitest",
+          "runnerDetectedFrom": "package_json",
+          "testsTotal": 2,
+          "testsPassed": 2,
+          "testsFailed": 0,
+          "testsSkipped": 0,
+          "parseFailed": false
+        }
+      },
+      {
+        "name": "production-build",
+        "kind": "process",
+        "verificationMethod": "exit-code",
+        "passed": true,
+        "timedOut": false,
+        "skipped": false,
+        "skippedReason": null,
+        "exitCode": 0,
+        "outputSample": "\r\n\u003E campusbite-live@1.0.0 build\r\n\u003E next build\r\n\r\n\u25B2 Next.js 16.4.5 (Turbopack)\r\n- Environments: .env.local\r\n\u2713 Running next.config.ts took 5.3s\r\n\r\n  Creating an optimized production build ...\r\n\u2713 Compiled successfully in 7.3s\r\n  Running TypeScript ...\r\n  Finished TypeScript in 7.9s ...\r\n  Collecting page data using 11 workers ...\r\n  Generating static pages using 11 workers (0/8) ...\r\n  Generating static pages using 11 workers (2/8) \r\n  Generating static pages using 11 workers (4/8) \r\n  Generating static pages using 11 workers (6/8) \r\n\u2713 Generating static pages using 11 workers (8/8) in 762ms\r\n  Finalizing page optimization ...\r\n\r\nRoute (app)\r\n\u250C \u25CB /\r\n\u251C \u25CB /_not-found\r\n\u251C \u0192 /api/agent\r\n\u251C \u0192 /api/health\r\n\u251C \u0192 /api/kitchen\r\n\u251C \u0192 /api/login\r\n\u251C \u0192 /api/logout\r\n\u251C \u0192 /api/me\r\n\u251C \u0192 /api/menu\r\n\u2514 \u25CB /login\r\n\r\n\r\n\u0192 Proxy (Middleware)\r\n\r\n\u25CB  (Static)   prerendered as static content\r\n\u0192  (Dynamic)  server-rendered on demand\r\n\r\n",
+        "durationMs": 28351
+      },
+      {
+        "name": "login-page-serves",
+        "kind": "http-probe",
+        "verificationMethod": "http-status",
+        "passed": true,
+        "timedOut": false,
+        "skipped": false,
+        "skippedReason": null,
+        "exitCode": null,
+        "outputSample": "HTTP 200\n\u003C!DOCTYPE html\u003E\u003Chtml lang=\u0022en\u0022\u003E\u003Chead\u003E\u003Cmeta charSet=\u0022utf-8\u0022/\u003E\u003Cmeta name=\u0022viewport\u0022 content=\u0022width=device-width, initial-scale=1\u0022/\u003E\u003Clink rel=\u0022stylesheet\u0022 href=\u0022/_next/static/chunks/2fsc_ndz2nuey.css\u0022 data-precedence=\u0022next\u0022/\u003E\u003Clink rel=\u0022preload\u0022 as=\u0022script\u0022 fetchPriority=\u0022low\u0022 href=\u0022/_next/static/chunks/0j1we3cwg31qe.js\u0022/\u003E\u003Cscript src=\u0022/_next/static/chunks/0m3mby5pxg4oz.js\u0022 async=\u0022\u0022\u003E\u003C/script\u003E\u003Cscript src=\u0022/_next/static/chunks/23e6jep2anmtk.js\u0022 async=\u0022\u0022\u003E\u003C/script\u003E\u003Cscript src=\u0022/_next/static/chunks/turbopack-2u1d16houkiyo.js\u0022 async=\u0022\u0022\u003E\u003C/script\u003E\u003Cscript src=\u0022/_next/static/chunks/3qfy96eoyh-ek.js\u0022 async=\u0022\u0022\u003E\u003C/script\u003E\u003Cscript src=\u0022/_next/static/chunks/0uvec6zqvvk9c.js\u0022 async=\u0022\u0022\u003E\u003C/script\u003E\u003Ctitle\u003EHackathon Starter\u003C/title\u003E\u003Cmeta name=\u0022description\u0022 content=\u0022Next.js \u002B Supabase \u002B Gemini function calling starter\u0022/\u003E\u003Cscript src=\u0022/_next/static/chunks/0cz1d0mv5g_q7.js\u0022 noModule=\u0022\u0022\u003E\u003C/script\u003E\u003C/head\u003E\u003Cbody class=\u0022min-h-screen\u0022\u003E\u003Cdiv hidden=\u0022\u0022\u003E\u003C!--$--\u003E\u003C!--/$--\u003E\u003C/div\u003E\u003Cmain class=\u0022flex min-h-screen items-center justify-center p-4\u0022\u003E\u003Cform class=\u0022w-full max-w-sm rounded-xl border border-slate-200 bg-white p-6 shadow-sm\u0022\u003E\u003Ch1 class=\u0022text-lg font-semibold\u0022\u003EEnter team passcode\u003C/h1\u003E\u003Cp class=\u0022mt-1 text-sm text-slate-500\u0022\u003EThis keeps your app and your Gemini quota safe.\u003C/p\u003E\u003Cinput type=\u0022password\u0022 class=\u0022mt-4 w-full rounded-lg border border-slate-300 px-3 py-2 outline-none focus:border-slate-500\u0022 placeholder=\u0022Passcode\u0022 autofocus=\u0022\u0022 value=\u0022\u0022/\u003E\u003Cbutton type=\u0022submit\u0022 disabled=\u0022\u0022 class=\u0022mt-4 w-full rounded-lg bg-slate-900 px-3 py-2 text-white disabled:opacity-50\u0022\u003EEnter\u003C/button\u003E\u003C/form\u003E\u003C/main\u003E\u003C!--$--\u003E\u003C!--/$--\u003E\u003Cscript id=\u0022_R_\u0022\u003E(globalThis[\u0022TURBOPACK\u0022] || (globalThis[\u0022TURBOPACK\u0022] = [])).push({\u0022otherChunks\u0022:[\u0022static/chunks/0j1we3cwg31qe.js\u0022,\u0022static/chunks/0m3mby5pxg4oz.js\u0022,\u0022static/chunks/23e6jep2anmtk.js\u0022],\u0022runtimeModuleIds\u0022:[94553]});\u003C/script\u003E\u003Cscript src=\u0022/_next/static/chunks/0j1we3cwg31qe.js\u0022 async=\u0022\u0022\u003E\u003C/script\u003E\u003Cscript\u003E(self.__next_f=self.__next_f||[]).push([0])\u003C/script\u003E\u003Cscript\u003Eself.__next_f.push([1,\u00221:\\\u0022$Sreact.fragment\\\u0022\\n2:\\\u0022/_next/static/chunks/3qfy96eoyh-ek.js\\\u0022\\n3:I[39756,[\\\u0022$2\\\u0022],\\\u0022default\\\u0022]\\n4:I[37457,[\\\u0022$2\\\u0022],\\\u0022default\\\u0022]\\n8:I[47257,[\\\u0022$2\\\u0022],\\\u0022ClientPageRoot\\\u0022]\\n9:\\\u0022/_next/static/chunks/0uvec6zqvvk9c.js\\\u0022\\na:I[89954,[\\\u0022$2\\\u0022,\\\u0022$9\\\u0022],\\\u0022default\\\u0022]\\nd:I[97367,[\\\u0022$2\\\u0022],\\\u0022OutletBoundary\\\u0022]\\ne:\\\u0022$Sreact.suspense\\\u0022\\n10:\\\u0022ViewportBoundary\\\u0022\\n11:I[97367,[\\\u0022$2\\\u0022],\\\u0022$10\\\u0022]\\n13:\\\u0022MetadataBoundary\\\u0022\\n14:I[97367,[\\\u0022$2\\\u0022],\\\u0022$13\\\u0022]\\n16:I[68027,[\\\u0022$2\\\u0022],\\\u0022default\\\u0022,1]\\n:HL[\\\u0022/_next/static/chunks/2fsc_ndz2nuey.css\\\u0022,\\\u0022style\\\u0022]\\n6:X\\n7:[[\\\u0022children\\\u0022,{\\\u0022s\\\u0022:\\\u0022__PAGE__\\\u0022,\\\u0022h\\\u0022:512,\\\u0022d\\\u0022:{\\\u0022r\\\u0022:[\\\u0022$\\\u0022,\\\u0022$1\\\u0022,\\\u0022c\\\u0022,{\\\u0022children\\\u0022:[[\\\u0022$\\\u0022,\\\u0022$L8\\\u0022,null,{\\\u0022Component\\\u0022:\\\u0022$a\\\u0022,\\\u0022serverProvidedParams\\\u0022:{\\\u0022searchParams\\\u0022:{},\\\u0022params\\\u0022:{},\\\u0022promises\\\u0022:[\\\u0022$@b\\\u0022,\\\u0022$@c\\\u0022]}}],[[\\\u0022$\\\u0022,\\\u0022script\\\u0022,\\\u0022script-0\\\u0022,{\\\u0022src\\\u0022:\\\u0022/_next/static/chunks/0uvec6zqvvk9c.js\\\u0022,\\\u0022async\\\u0022:true,\\\u0022nonce\\\u0022:\\\u0022$undefined\\\u0022}]],[\\\u0022$\\\u0022,\\\u0022$Ld\\\u0022,null,{\\\u0022children\\\u0022:[\\\u0022$\\\u0022,\\\u0022$e\\\u0022,null,{\\\u0022name\\\u0022:\\\u0022Next.MetadataOutlet\\\u0022,\\\u0022children\\\u0022:\\\u0022$@f\\\u0022}]}]]}],\\\u0022p\\\u0022:false,\\\u0022v\\\u0022:null}}]]\\n5:[[\\\u0022children\\\u0022,{\\\u0022s\\\u0022:\\\u0022login\\\u0022,\\\u0022h\\\u0022:512,\\\u0022d\\\u0022:{\\\u0022r\\\u0022:[\\\u0022$\\\u0022,\\\u0022$1\\\u0022,\\\u0022c\\\u0022,{\\\u0022children\\\u0022:[null,[\\\u0022$\\\u0022,\\\u0022$L3\\\u0022,null,{\\\u0022parallelRouterKey\\\u0022:\\\u0022children\\\u0022,\\\u0022error\\\u0022:\\\u0022$undefined\\\u0022,\\\u0022errorStyles\\\u0022:\\\u0022$undefined\\\u0022,\\\u0022errorScripts\\\u0022:\\\u0022$undefined\\\u0022,\\\u0022template\\\u0022:[\\\u0022$\\\u0022,\\\u0022$L4\\\u0022,null,{}],\\\u0022templateStyles\\\u0022:\\\u0022$undefined\\\u0022,\\\u0022templateScripts\\\u0022:\\\u0022$undefined\\\u0022,\\\u0022notFound\\\u0022:\\\u0022$undefined\\\u0022,\\\u0022forbidden\\\u0022:\\\u0022$undefined\\\u0022,\\\u0022unauthorized\\\u0022:\\\u0022$undefined\\\u0022}]]}],\\\u0022p\\\u0022:false,\\\u0022v\\\u0022:\\\u0022$6\\\u0022},\\\u0022c\\\u0022:\\\u0022$Q7\\\u0022}]]\\n0:{\\\u0022P\\\u0022:null,\\\u0022c\\\u0022:[\\\u0022\\\u0022,\\\u0022login\\\u0022],\\\u0022q\\\u0022:\\\u0022\\\u0022,\\\u0022i\\\u0022:false,\\\u0022t\\\u0022:{\\\u0022t\\\u0022:{\\\u0022s\\\u0022:\\\u0022\\\u0022,\\\u0022h\\\u0022:528,\\\u0022d\\\u0022:{\\\u0022r\\\u0022:[\\\u0022$\\\u0022,\\\u0022$1\\\u0022,\\\u0022c\\\u0022,{\\\u0022children\\\u0022:[[[\\\u0022$\\\u0022,\\\u0022link\\\u0022,\\\u00220\\\u0022,{\\\u0022rel\\\u0022:\\\u0022stylesheet\\\u0022,\\\u0022href\\\u0022:\\\u0022/_next/static/chunks/2fsc_ndz2nuey.css\\\u0022,\\\u0022precedence\\\u0022:\\\u0022next\\\u0022,\\\u0022crossOrigin\\\u0022:\\\u0022$undefined\\\u0022,\\\u0022nonce\\\u0022:\\\u0022$undefined\\\u0022}],[\\\u0022$\\\u0022,\\\u0022script\\\u0022,\\\u0022script-0\\\u0022,{\\\u0022src\\\u0022:\\\u0022/_next/static/chunks/3qfy96eoyh-ek.js\\\u0022,\\\u0022async\\\u0022:true,\\\u0022nonce\\\u0022:\\\u0022$undefined\\\u0022}]],[\\\u0022$\\\u0022,\\\u0022html\\\u0022,null,{\\\u0022lang\\\u0022:\\\u0022en\\\u0022,\\\u0022children\\\u0022:[\\\u0022$\\\u0022,\\\u0022body\\\u0022,null,{\\\u0022className\\\u0022:\\\u0022min-h-screen\\\u0022,\\\u0022children\\\u0022:[\\\u0022$\\\u0022,\\\u0022$L3\\\u0022,null,{\\\u0022pa\n\u2026[truncated]",
+        "durationMs": 3065
+      }
+    ],
+    "executions": [
+      {
+        "source": "setup[0]",
+        "resolvedExecutable": "C:\\Program Files\\nodejs\\npm.CMD",
+        "args": [
+          "ci"
+        ],
+        "cwd": "C:\\Users\\ujjai\\Downloads\\campusbite-live",
+        "env": {},
+        "prependPath": [],
+        "platform": "win32"
+      },
+      {
+        "source": "typecheck",
+        "resolvedExecutable": "C:\\Program Files\\nodejs\\npm.CMD",
+        "args": [
+          "run",
+          "typecheck"
+        ],
+        "cwd": "C:\\Users\\ujjai\\Downloads\\campusbite-live",
+        "env": {},
+        "prependPath": [],
+        "platform": "win32"
+      },
+      {
+        "source": "tests-pass",
+        "resolvedExecutable": "C:\\Program Files\\nodejs\\npm.CMD",
+        "args": [
+          "test"
+        ],
+        "cwd": "C:\\Users\\ujjai\\Downloads\\campusbite-live",
+        "env": {},
+        "prependPath": [],
+        "platform": "win32"
+      },
+      {
+        "source": "production-build",
+        "resolvedExecutable": "C:\\Program Files\\nodejs\\npm.CMD",
+        "args": [
+          "run",
+          "build"
+        ],
+        "cwd": "C:\\Users\\ujjai\\Downloads\\campusbite-live",
+        "env": {},
+        "prependPath": [],
+        "platform": "win32"
+      },
+      {
+        "source": "login-page-serves",
+        "resolvedExecutable": "C:\\Program Files\\nodejs\\npm.CMD",
+        "args": [
+          "run",
+          "start"
+        ],
+        "cwd": "C:\\Users\\ujjai\\Downloads\\campusbite-live",
+        "env": {},
+        "prependPath": [],
+        "platform": "win32"
+      }
+    ]
+  }
+}

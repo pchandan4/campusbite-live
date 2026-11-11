@@ -107,5 +107,59 @@ const getMyOrders = defineTool({
   },
 });
 
+const placeOrder = defineTool({
+  name: "placeOrder",
+  description:
+    "Use this when//. the student has chosen menu items and a pickup slot and asks to place the order.",
+  writes: true,
+  schema: z.object({
+    items: z
+      .array(
+        z.object({
+          menu_item_id: z.number().int().positive(),
+          quantity: z.number().int().min(1).max(5),
+        })
+      )
+      .min(1),
+    slot_id: z.number().int().positive(),
+  }),
+  run: async ({ items, slot_id }) => {
+    const { data, error } = await getSupabase().rpc("place_order", {
+      p_student_id: CURRENT_STUDENT_ID,
+      p_slot_id: slot_id,
+      p_items: items,
+    });
+
+    if (error) throw new Error(error.message);
+    return data;
+  },
+});
+
+const cancelOrder = defineTool({
+  name: "cancelOrder",
+  description:
+    "Use this when//. the student asks to cancel one of their orders; the database will check whether it can still be cancelled.",
+  writes: true,
+  schema: z.object({
+    order_id: z.number().int().positive(),
+  }),
+  run: async ({ order_id }) => {
+    const { data, error } = await getSupabase().rpc("cancel_order", {
+      p_student_id: CURRENT_STUDENT_ID,
+      p_order_id: order_id,
+    });
+
+    if (error) throw new Error(error.message);
+    return data;
+  },
+});
+
 /** Every tool in this list is given to Gemini. */
-export const tools: AgentTool[] = [getMenu, getWalletBalance, getPickupSlots, getMyOrders];
+export const tools: AgentTool[] = [
+  getMenu,
+  getWalletBalance,
+  getPickupSlots,
+  getMyOrders,
+  placeOrder,
+  cancelOrder,
+];
